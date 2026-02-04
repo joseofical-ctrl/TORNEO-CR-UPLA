@@ -35,8 +35,8 @@ Plataforma web desarrollada con **Astro** y **Tailwind CSS** para la organizaci�
    npm run build
 
 ## 📂 Estructura de Archivos Clave
-* src/pages/index.astro: Página principal con la lógica responsiva del torneo.
+* **src/pages/index.astro**: Página principal con la lógica responsiva del torneo.
 
-* src/layouts/layout.astro: Estructura base y configuración del viewport.
+* **src/layouts/layout.astro**: Estructura base y configuración del viewport.
 
-* public/Guíaoficial.pdf: Reglamento detallado y FAQ del torneo.
+* **public/Guíaoficial.pdf**: Reglamento detallado y FAQ del torneo.
