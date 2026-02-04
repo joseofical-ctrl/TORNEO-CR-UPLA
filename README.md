@@ -1,53 +1,38 @@
-⚔️ Arena UPLA 2026 - Torneo Estudiantil
-Este proyecto es una plataforma web desarrollada con Astro y Tailwind CSS para la organización y difusión de un torneo de Clash Royale exclusivo para la comunidad de la Universidad Peruana Los Andes (UPLA).
+# ⚔️ Arena UPLA 2026 - Torneo Estudiantil
 
-📋 Características del Proyecto
-Diseño Responsivo: Optimizado para dispositivos móviles y escritorio, eliminando errores de doble desplazamiento (scroll).
+Plataforma web desarrollada con **Astro** y **Tailwind CSS** para la organización del torneo de Clash Royale exclusivo para la comunidad de la **Universidad Peruana Los Andes (UPLA)**.
 
-Gestión de Sorteo: Sección dedicada para mostrar los 12 cupos oficiales, pases directos (Byes) y llaves de la Ronda 1.
+## 📋 Características del Proyecto
+* **Diseño Responsivo**: Interfaz optimizada para móviles y escritorio, asegurando una navegación fluida.
+* **Gestión de Sorteo**: Visualización de los 12 cupos, pases directos y llaves de enfrentamiento.
+* **Contenido Estratégico**: Análisis del meta (Log Bait), cartas prohibidas (Bans) y mazos recomendados (2.6 y Golem).
+* **Centro de Documentación**: Acceso directo a la **Guíaoficial.pdf** con el reglamento completo.
+* **Registro Validado**: Formulario vinculado a Microsoft Office 365 para asegurar la identidad estudiantil.
 
-Contenido Estratégico: Visualización del meta actual (Log Bait), cartas restringidas y mazos recomendados.
+## 🎮 Reglas del Torneo
+* **Participantes**: Cupo limitado a 12 jugadores.
+* **Nivel de Juego**: Torre Estándar Nivel 11.
+* **Formato**: Eliminación directa 1 vs 1.
+* **Inscripción**: S/ 3.00 vía Yape/Plin.
+* **Premio**: Pozo de S/ 20.00 para el campeón.
+* **Cartas Prohibidas**: Mega Caballero, Chispitas, Pekka y Bárbaros Élite.
 
-Centro de Información: Botón de previsualización y descarga de la Guía Oficial en formato PDF.
+## 🛠️ Tecnologías Utilizadas
+* **Framework**: [Astro](https://astro.build/).
+* **Estilos**: [Tailwind CSS](https://tailwindcss.com/).
+* **Tipografía**: Lilita One.
+* **Despliegue**: Optimizado para GitHub Pages / Netlify.
 
-Registro Centralizado: Enlace directo a Microsoft Forms para inscripciones validadas con correo institucional.
+## 🚀 Instalación y Uso
+1. **Instalar dependencias**:
+   ```bash
+   npm install
+   ```bash
+   npm run dev
+   ```bash
+   npm run build
 
-🎮 Reglas del Torneo
-Participantes: Limitado a 12 guerreros.
+   📂 Archivos Clave
+src/pages/index.astro: Lógica principal y secciones del torneo.
 
-Nivel: Torre Estándar Nivel 11.
-
-Formato: Eliminación directa 1 vs 1.
-
-Inscripción: S/ 3.00 (Pozo de premio: S/ 20.00).
-
-Cartas Prohibidas: Mega Caballero, Chispitas, Pekka y Bárbaros Élite.
-
-🛠️ Tecnologías Utilizadas
-Framework: Astro.
-
-Estilos: Tailwind CSS.
-
-Tipografía: Lilita One (vía Google Fonts).
-
-Iconografía: Emojis y recursos gráficos de RoyaleAPI.
-
-🚀 Configuración y Ejecución
-Instalar dependencias:
-
-Bash
-npm install
-Ejecutar en modo desarrollo:
-
-Bash
-npm run dev
-Construir para producción:
-
-Bash
-npm run build
-📂 Estructura de Archivos Clave
-src/pages/index.astro: Página principal con toda la lógica del torneo.
-
-src/layouts/layout.astro: Estructura base y configuración del viewport responsivo.
-
-public/Guíaoficial.pdf: Documento con el reglamento detallado y FAQ.
+public/Guíaoficial.pdf: Reglamento técnico y FAQ.
