@@ -84,9 +84,10 @@ const suggestedDecks = [
         </div>
       </div>
 
-      <section class="w-full max-w-5xl mb-20 px-2">
+      <section class="w-full max-w-5xl mb-20 px-2 text-center">
         <div class="bg-white/[0.02] border-2 border-blue-500/20 p-6 md:p-12 rounded-[2.5rem] md:rounded-[3rem] shadow-xl backdrop-blur-md">
           <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic mb-8" style="font-family: 'Lilita One', cursive;">Sorteo de Llaves</h3>
+          
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left">
             <div class="bg-yellow-500/5 border border-yellow-500/20 p-6 rounded-2xl">
               <h4 class="text-yellow-500 font-black text-xs uppercase mb-4 tracking-widest">⚡ Pases a Cuartos</h4>
@@ -99,7 +100,7 @@ const suggestedDecks = [
             </div>
             <div class="bg-blue-500/5 border border-blue-500/20 p-6 rounded-2xl">
               <h4 class="text-blue-400 font-black text-xs uppercase mb-4 tracking-widest">⚔️ Ronda 1</h4>
-              <ul class="text-white space-y-2 font-bold italic text-sm">
+              <ul class="text-white space-y-2 font-bold italic text-sm text-center md:text-left">
                 <li>• Por definir tras sorteo</li>
                 <li>• Por definir tras sorteo</li>
                 <li>• Por definir tras sorteo</li>
@@ -107,21 +108,39 @@ const suggestedDecks = [
               </ul>
             </div>
           </div>
-          <div class="relative w-full aspect-video rounded-2xl md:rounded-[2.5rem] overflow-hidden border-2 border-white/10 shadow-2xl bg-slate-900/80 flex items-center justify-center">
-             <div class="px-6">
+
+          <div class="relative w-full aspect-video rounded-2xl md:rounded-[2.5rem] overflow-hidden border-2 border-white/10 shadow-2xl bg-slate-900/80 flex items-center justify-center mb-6">
+             <div class="text-center z-10 px-6">
                 <div class="w-16 h-16 md:w-20 md:h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20 animate-pulse text-3xl md:text-4xl">🕒</div>
                 <h4 class="text-xl md:text-2xl font-black uppercase italic text-white" style="font-family: 'Lilita One', cursive;">Sorteo en Espera</h4>
                 <p class="text-slate-400 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-2">El video se publicará al completar los 12 cupos</p>
              </div>
+             <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none"></div>
           </div>
         </div>
+      </section>
+
+      <section class="w-full max-w-2xl mb-20 px-2">
+        <a 
+          href="/Guia-Arena-UPLA-2026.pdf" 
+          target="_blank"
+          class="flex items-center gap-6 bg-white/[0.03] hover:bg-white/[0.08] border-2 border-dashed border-white/20 p-6 md:p-8 rounded-[2.5rem] transition-all group shadow-2xl text-left"
+        >
+          <div class="bg-red-600 p-4 rounded-2xl shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform">
+            <span class="text-3xl md:text-4xl">📄</span>
+          </div>
+          <div>
+            <h4 class="text-white font-black uppercase italic text-xl md:text-2xl leading-tight" style="font-family: 'Lilita One', cursive;">Descargar Guía Oficial</h4>
+            <p class="text-slate-400 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-1">Reglamento, Formato y FAQ en PDF</p>
+          </div>
+        </a>
       </section>
 
       <section class="w-full mb-20 px-2">
         <div class="bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border border-purple-500/30 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden text-center md:text-left">
           <h2 class="text-2xl md:text-3xl font-black text-purple-400 uppercase italic mb-6" style="font-family: 'Lilita One', cursive;">El Mazo a Vencer</h2>
           <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-10">
-            <p class="flex-1 italic text-slate-300 text-sm md:text-base">El <span class="text-white font-black uppercase">Log Bait Clásico</span> domina actualmente el meta de nivel 11. ¿Tienes la defensa preparada?</p>
+            <p class="flex-1 italic text-slate-300 text-sm md:text-base leading-relaxed">El <span class="text-white font-black uppercase">Log Bait Clásico</span> domina actualmente el meta de nivel 11. ¿Tienes la defensa preparada?</p>
             <div class="grid grid-cols-4 gap-2 md:gap-3 bg-black/40 p-4 rounded-[1.5rem]">
               {cards.map(card => <img src={card.img} alt={card.name} class="w-12 h-16 md:w-20 md:h-24 object-contain transition-transform hover:scale-110" />)}
             </div>
@@ -148,8 +167,8 @@ const suggestedDecks = [
       </section>
 
       <section class="w-full mb-20 px-2">
-        <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic mb-10" style="font-family: 'Lilita One', cursive;">Recomendaciones</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic mb-10 text-center" style="font-family: 'Lilita One', cursive;">Recomendaciones</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
           {suggestedDecks.map(deck => (
             <div class="bg-white/[0.02] border border-white/5 p-6 md:p-8 rounded-[2rem] shadow-lg">
               <h4 class="text-white font-black italic text-lg md:text-xl uppercase mb-1">{deck.name}</h4>
@@ -163,26 +182,19 @@ const suggestedDecks = [
       </section>
 
       <section id="registro" class="w-full mb-20 px-2">
-        <div class="bg-gradient-to-br from-blue-900/40 to-slate-900/90 border-2 border-blue-500/30 p-10 md:p-12 rounded-[2.5rem] shadow-2xl">
-          <h2 class="text-4xl md:text-6xl font-black text-white uppercase italic mb-6 leading-none" style="font-family: 'Lilita One', cursive;">¿Listo para el Duelo?</h2>
-          <div class="mb-10"><p class="text-yellow-500 text-xl md:text-2xl font-black italic">Inscripción: S/ 3.00</p><p class="text-slate-300 font-bold text-[10px] md:text-sm uppercase tracking-widest px-4 mt-2">Usa tu cuenta institucional (@ms.upla.edu.pe)</p></div>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=uWqgjTfRT06djoIq445XAby72mATZKJOiaBeCGAF87FUMDBJTEZWVzdXQzExVzlXTExNNFBXQjZDVi4u" target="_blank" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-amber-950 font-black text-xl md:text-4xl py-6 md:py-8 px-8 md:px-12 rounded-2xl border-b-[8px] border-amber-700 uppercase italic shadow-2xl">¡INSCRIBIRME YA!</a>
-        </div>
-      </section>
-
-      <section class="w-full max-w-4xl mb-20 px-2">
-        <div class="bg-white/[0.03] border-2 border-white/10 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden text-left">
-          <div class="absolute top-0 right-0 p-8 opacity-10 text-6xl">✉️</div>
-          <div class="mb-8">
-            <h2 class="text-3xl md:text-4xl font-black text-white uppercase italic mb-2" style="font-family: 'Lilita One', cursive;">¿Necesitas más información?</h2>
-            <p class="text-slate-400 font-bold text-xs md:text-sm uppercase tracking-widest italic">Déjanos tu duda y te contactaremos por WhatsApp o correo institucional.</p>
+        <div class="bg-gradient-to-br from-blue-900/40 to-slate-900/90 border-2 border-blue-500/30 p-10 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl">
+          <h2 class="text-4xl md:text-6xl font-black text-white uppercase italic mb-6 leading-none" style="font-family: 'Lilita One', cursive;">¿Listo para <br/> el Duelo?</h2>
+          <div class="mb-10">
+            <p class="text-yellow-500 text-xl md:text-2xl font-black italic">Inscripción: S/ 3.00</p>
+            <p class="text-slate-300 font-bold text-[10px] md:text-sm uppercase tracking-widest px-4 mt-2">Usa tu cuenta institucional (@ms.upla.edu.pe)</p>
           </div>
-          <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="flex flex-col gap-2"><label class="text-[10px] font-black uppercase tracking-widest text-blue-400 ml-2">Nombre de Guerrero</label><input type="text" placeholder="Ej. Juan Pérez" class="bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 font-bold italic" /></div>
-            <div class="flex flex-col gap-2"><label class="text-[10px] font-black uppercase tracking-widest text-blue-400 ml-2">WhatsApp / Telegram</label><input type="tel" placeholder="999 999 999" class="bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 font-bold italic" /></div>
-            <div class="flex flex-col gap-2 md:col-span-2"><label class="text-[10px] font-black uppercase tracking-widest text-blue-400 ml-2">Tu duda o consulta</label><textarea rows="3" placeholder="¿Cómo funcionan los desempates?" class="bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500 font-bold italic resize-none"></textarea></div>
-            <button type="submit" class="md:col-span-2 bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-2xl uppercase italic text-xl transition-all" style="font-family: 'Lilita One', cursive;">ENVIAR CONSULTA</button>
-          </form>
+          <a 
+            href="https://forms.office.com/Pages/ResponsePage.aspx?id=uWqgjTfRT06djoIq445XAby72mATZKJOiaBeCGAF87FUMDBJTEZWVzdXQzExVzlXTExNNFBXQjZDVi4u" 
+            target="_blank" 
+            class="inline-block bg-yellow-500 hover:bg-yellow-400 text-amber-950 font-black text-xl md:text-4xl py-6 md:py-8 px-8 md:px-12 rounded-2xl border-b-[8px] border-amber-700 uppercase italic shadow-2xl transition-all active:translate-y-1 active:border-b-0"
+          >
+            ¡INSCRIBIRME YA!
+          </a>
         </div>
       </section>
 
@@ -190,12 +202,17 @@ const suggestedDecks = [
         <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic mb-8" style="font-family: 'Lilita One', cursive;">Dudas de la Arena</h2>
         <div class="space-y-4 px-2">
           {[
-            { q: "¿Por qué el costo de 3 soles?", a: "El monto recaudado se destina íntegramente al pozo de premios." },
+            { q: "¿Por qué el costo de 3 soles?", a: "El monto recaudado se destina íntegramente al pozo de premios para incentivar la competencia estudiantil." },
             { q: "¿Cómo realizo el pago?", a: "Dentro del formulario de Microsoft encontrarás el QR de Yape o Plin." },
-            { q: "¿Se permiten evoluciones?", a: "Sí, siempre que las tengas desbloqueadas en nivel estándar 11." },
+            { q: "¿Se permiten evoluciones?", a: "Sí, siempre que las tengas desbloqueadas y se mantengan en el nivel estándar 11." },
             { q: "¿Cómo verifican mi identidad?", a: "Se valida automáticamente tu correo institucional de la UPLA." }
           ].map(item => (
-            <details class="group bg-white/5 border border-white/10 rounded-[1.5rem] p-5 md:p-6 cursor-pointer text-left"><summary class="text-white font-bold list-none flex justify-between items-center italic uppercase text-xs md:text-base select-none">{item.q} <span class="text-blue-500 group-open:rotate-180 transition-transform">▼</span></summary><p class="text-slate-400 mt-4 font-medium text-xs md:text-sm">{item.a}</p></details>
+            <details class="group bg-white/5 border border-white/10 rounded-[1.5rem] p-5 md:p-6 cursor-pointer text-left focus:outline-none">
+              <summary class="text-white font-bold list-none flex justify-between items-center italic uppercase text-xs md:text-base select-none">
+                {item.q} <span class="text-blue-500 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <p class="text-slate-400 mt-4 font-medium text-xs md:text-sm leading-relaxed">{item.a}</p>
+            </details>
           ))}
         </div>
       </section>
