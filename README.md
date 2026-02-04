@@ -27,12 +27,9 @@ Plataforma web desarrollada con **Astro** y **Tailwind CSS** para la organizaci�
 1. **Instalar dependencias**:
    ```bash
    npm install
+2. **Modo Desarrollo**:
    ```bash
    npm run dev
+3. **Producción**:
    ```bash
    npm run build
-
-   📂 Archivos Clave
-src/pages/index.astro: Lógica principal y secciones del torneo.
-
-public/Guíaoficial.pdf: Reglamento técnico y FAQ.
