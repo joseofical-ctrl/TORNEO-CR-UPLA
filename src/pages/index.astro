@@ -59,45 +59,75 @@ const suggestedDecks = [
       <p class="text-slate-400 text-base md:text-2xl font-bold uppercase tracking-[0.1em] mt-8 italic leading-relaxed">"La corona universitaria busca dueño"</p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl z-10">
-      <div class="bg-yellow-500/10 border border-yellow-500/30 p-8 md:p-10 rounded-[2.5rem] text-center shadow-2xl">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl z-10 mb-20">
+      <div class="bg-yellow-500/10 backdrop-blur-2xl border border-yellow-500/30 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] text-center shadow-2xl">
         <h2 class="text-3xl md:text-4xl text-yellow-500 font-black uppercase italic mb-2" style="font-family: 'Lilita One', cursive;">Premio</h2>
         <p class="text-white text-5xl md:text-6xl font-black italic">S/ 20.00</p>
       </div>
 
-      <div class="bg-blue-600/10 border border-blue-500/30 p-8 md:p-10 rounded-[2.5rem] text-center shadow-2xl">
+      <div class="bg-blue-600/10 backdrop-blur-2xl border border-blue-500/30 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] text-center shadow-2xl">
         <h2 class="text-3xl md:text-4xl text-blue-400 font-black uppercase italic mb-2" style="font-family: 'Lilita One', cursive;">Costo</h2>
         <p class="text-white text-5xl md:text-6xl font-black italic">S/ 3.00</p>
       </div>
 
-      <div class="bg-white/[0.03] border border-white/10 p-8 md:p-10 rounded-[2.5rem] shadow-2xl">
+      <div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl">
         <h2 class="text-3xl md:text-4xl text-slate-400 font-black uppercase italic mb-4 text-center" style="font-family: 'Lilita One', cursive;">Reglas</h2>
         <ul class="text-slate-200 text-base md:text-lg font-bold space-y-1 text-center">
           <li>• Nivel de Torre 11</li>
           <li>• Eliminación Directa 1v1</li>
-          <li>• Login Microsoft 365</li>
+          <li>• Microsoft 365</li>
         </ul>
       </div>
     </div>
 
-    <section class="w-full max-w-5xl mt-24 md:mt-32 z-10 px-2">
-      <div class="border-2 border-dashed border-white/10 p-10 md:p-16 rounded-[3rem] text-center backdrop-blur-sm">
-        <span class="text-5xl md:text-6xl mb-6 block">📊</span>
-        <h3 class="text-2xl md:text-3xl font-black text-white uppercase italic" style="font-family: 'Lilita One', cursive;">Bracket del Torneo</h3>
-        <p class="text-slate-500 font-bold uppercase text-[9px] md:text-[10px] tracking-[0.4em] mt-2 italic">Se publicará al cerrar los 12 cupos</p>
+    <section class="w-full max-w-5xl mb-20 z-10 px-2">
+      <div class="relative bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border border-purple-500/30 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] backdrop-blur-xl shadow-2xl overflow-hidden">
+        <h2 class="text-2xl md:text-3xl font-black text-purple-400 uppercase italic mb-6 text-center md:text-left" style="font-family: 'Lilita One', cursive;">El Mazo a Vencer</h2>
+        <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-10">
+          <div class="flex-1 text-center md:text-left">
+            <p class="text-slate-300 font-bold mb-6 italic leading-relaxed text-sm">El <span class="text-white font-black">Log Bait Clásico</span> domina el meta de nivel 11. ¿Tienes la estrategia para frenarlo?</p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-2">
+              <span class="px-3 py-1 bg-purple-500/20 rounded-full text-[9px] font-black text-purple-300 uppercase border border-purple-500/30 italic tracking-tighter">Dificultad: Alta</span>
+              <span class="px-3 py-1 bg-blue-500/20 rounded-full text-[9px] font-black text-blue-300 uppercase border border-blue-500/30 italic tracking-tighter">3.3 Elixir</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-4 gap-2 md:gap-3 bg-black/40 p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] border border-white/5 shadow-inner">
+            {cards.map(card => (
+              <img src={card.img} alt={card.name} class="w-12 h-16 md:w-20 md:h-24 object-contain drop-shadow-lg transition-transform hover:scale-110" />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="w-full max-w-5xl mt-24 md:mt-32 z-10 px-2">
+    <section class="w-full max-w-4xl mb-20 z-10 px-4">
+      <div class="bg-red-600/10 border border-red-500/20 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] backdrop-blur-md relative overflow-hidden shadow-xl">
+        <div class="absolute -right-10 -top-10 text-9xl opacity-10 rotate-12">🚫</div>
+        <h2 class="text-2xl md:text-3xl font-black text-red-500 uppercase italic mb-6 text-center md:text-left" style="font-family: 'Lilita One', cursive;">Cartas Restringidas</h2>
+        <div class="flex flex-wrap justify-center md:justify-start gap-6 md:gap-10">
+          {bans.map(ban => (
+            <div class="flex flex-col items-center group">
+              <div class="relative">
+                <img src={ban.img} alt={ban.name} class="w-16 h-20 md:w-20 md:h-24 object-contain grayscale opacity-50 transition-all group-hover:grayscale-0 group-hover:opacity-100" />
+                <div class="absolute inset-0 flex items-center justify-center text-red-600 text-5xl md:text-6xl font-black rotate-45 pointer-events-none">/</div>
+              </div>
+              <p class="text-[9px] md:text-[10px] text-center mt-3 text-slate-500 font-black uppercase italic">{ban.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full max-w-5xl mb-20 z-10 px-2">
       <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic mb-10 text-center" style="font-family: 'Lilita One', cursive;">Recomendaciones</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {suggestedDecks.map(deck => (
-          <div class="bg-white/[0.02] border border-white/5 p-6 md:p-8 rounded-[2rem] md:rounded-[3rem] backdrop-blur-md">
+          <div class="bg-white/[0.02] border border-white/5 p-6 md:p-8 rounded-[2rem] md:rounded-[3rem] backdrop-blur-md hover:bg-white/[0.04] transition-all group">
             <h4 class="text-white font-black italic text-lg md:text-xl uppercase mb-1">{deck.name}</h4>
             <span class="text-[9px] text-blue-400 font-bold uppercase tracking-widest">{deck.tag}</span>
-            <div class="flex gap-3 md:gap-4 mt-6 justify-center md:justify-start">
+            <div class="flex gap-2 md:gap-4 mt-6 justify-center md:justify-start">
               {deck.cards.map(img => (
-                <img src={img} class="w-12 h-16 md:w-16 md:h-20 object-contain drop-shadow-md" />
+                <img src={img} class="w-12 h-16 md:w-16 md:h-20 object-contain drop-shadow-md transition-transform group-hover:-translate-y-2" />
               ))}
             </div>
           </div>
@@ -105,12 +135,12 @@ const suggestedDecks = [
       </div>
     </section>
 
-    <section id="registro" class="w-full max-w-4xl mt-24 md:mt-32 z-10 px-2">
+    <section id="registro" class="w-full max-w-4xl z-10 px-2 mb-20">
       <div class="bg-gradient-to-br from-blue-900/40 to-slate-900/90 border-2 border-blue-500/30 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl text-center relative overflow-hidden group">
         <h2 class="text-3xl md:text-6xl font-black text-white uppercase italic mb-6 leading-none" style="font-family: 'Lilita One', cursive;">¿Listo para <br/> el Duelo?</h2>
-        <p class="text-slate-300 font-bold mb-10 max-w-xl mx-auto italic text-xs md:text-base">
-          Costo: <span class="text-yellow-500 text-lg md:text-xl font-black">S/ 3.00</span> <br/>
-          Usa tu cuenta institucional para el registro.
+        <p class="text-slate-300 font-bold mb-10 max-w-xl mx-auto leading-relaxed italic text-xs md:text-base px-2">
+          Inscripción: <span class="text-yellow-500 text-lg md:text-xl font-black">S/ 3.00</span> <br/>
+          Usa tu cuenta institucional para el registro oficial.
         </p>
         <a 
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=uWqgjTfRT06djoIq445XAby72mATZKJOiaBeCGAF87FUMDBJTEZWVzdXQzExVzlXTExNNFBXQjZDVi4u" 
@@ -123,7 +153,7 @@ const suggestedDecks = [
       </div>
     </section>
 
-    <footer class="pb-10 pt-20 text-center z-10 opacity-30 px-4">
+    <footer class="pb-10 pt-10 text-center z-10 opacity-30 px-4">
       <p class="text-white text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em]">Torneo Universitario • Huancayo 2026</p>
     </footer>
 
