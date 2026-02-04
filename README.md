@@ -27,9 +27,9 @@ Plataforma web desarrollada con **Astro** y **Tailwind CSS** para la organizaci�
 1. **Instalar dependencias**:
    ```bash
    npm install
-2. **Modo Desarrollo**:
+2. **Ejecutar en modo desarrollo**:
    ```bash
    npm run dev
-3. **Producción**:
+3. **Construir para producción**:
    ```bash
    npm run build
