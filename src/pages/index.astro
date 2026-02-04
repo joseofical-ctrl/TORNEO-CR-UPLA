@@ -65,13 +65,13 @@ const suggestedDecks = [
         <div class="bg-yellow-500/10 backdrop-blur-2xl border border-yellow-500/30 p-8 md:p-10 rounded-[2.5rem] text-center shadow-2xl">
           <h2 class="text-3xl md:text-4xl text-yellow-500 font-black uppercase italic mb-2" style="font-family: 'Lilita One', cursive;">Premio</h2>
           <p class="text-white text-5xl md:text-6xl font-black italic uppercase leading-none">S/ 20.00</p>
-          <p class="text-yellow-500/60 font-bold text-[10px] uppercase mt-4 italic">Para el Campeón Final</p>
+          <p class="text-yellow-500/60 font-bold text-[10px] uppercase mt-4 italic text-center">Para el Campeón Final</p>
         </div>
 
         <div class="bg-blue-600/10 backdrop-blur-2xl border border-blue-500/30 p-8 md:p-10 rounded-[2.5rem] text-center shadow-2xl flex flex-col items-center justify-center">
           <h2 class="text-3xl md:text-4xl text-blue-400 font-black uppercase italic mb-2" style="font-family: 'Lilita One', cursive;">Costo</h2>
           <p class="text-white text-5xl md:text-6xl font-black italic uppercase leading-none">S/ 3.00</p>
-          <p class="text-blue-300/60 font-bold text-[10px] uppercase mt-4 italic">Inscripción por jugador</p>
+          <p class="text-blue-300/60 font-bold text-[10px] uppercase mt-4 italic text-center">Inscripción por jugador</p>
         </div>
 
         <div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 md:p-10 rounded-[2.5rem] shadow-2xl">
@@ -100,7 +100,7 @@ const suggestedDecks = [
             </div>
             <div class="bg-blue-500/5 border border-blue-500/20 p-6 rounded-2xl">
               <h4 class="text-blue-400 font-black text-xs uppercase mb-4 tracking-widest">⚔️ Ronda 1</h4>
-              <ul class="text-white space-y-2 font-bold italic text-sm">
+              <ul class="text-white space-y-2 font-bold italic text-sm text-center md:text-left">
                 <li>• Por definir tras sorteo</li>
                 <li>• Por definir tras sorteo</li>
                 <li>• Por definir tras sorteo</li>
@@ -122,28 +122,12 @@ const suggestedDecks = [
         </div>
       </section>
 
-      <section class="w-full mb-20 px-2">
-        <div class="bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border border-purple-500/30 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden">
-          <h2 class="text-2xl md:text-3xl font-black text-purple-400 uppercase italic mb-6 text-center md:text-left" style="font-family: 'Lilita One', cursive;">El Mazo a Vencer</h2>
-          <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-10">
-            <div class="flex-1 text-center md:text-left text-sm md:text-base italic text-slate-300">
-              <p>El <span class="text-white font-black uppercase">Log Bait Clásico</span> domina actualmente el meta estudiantil de nivel 11. ¿Tienes la defensa preparada para frenar el barril?</p>
-            </div>
-            <div class="grid grid-cols-4 gap-2 md:gap-3 bg-black/40 p-4 rounded-[1.5rem] md:rounded-[2rem]">
-              {cards.map(card => (
-                <img src={card.img} alt={card.name} class="w-12 h-16 md:w-20 md:h-24 object-contain transition-transform hover:scale-110" />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="registro" class="w-full mb-20 px-2">
-        <div class="bg-gradient-to-br from-blue-900/40 to-slate-900/90 border-2 border-blue-500/30 p-10 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] text-center relative overflow-hidden">
+      <section id="registro" class="w-full max-w-4xl mb-20 px-2">
+        <div class="bg-gradient-to-br from-blue-900/40 to-slate-900/90 border-2 border-blue-500/30 p-10 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] text-center relative overflow-hidden group">
           <h2 class="text-4xl md:text-6xl font-black text-white uppercase italic mb-6 leading-none" style="font-family: 'Lilita One', cursive;">¿Listo para <br/> el Duelo?</h2>
           <div class="space-y-2 mb-10 text-center">
              <p class="text-yellow-500 text-xl md:text-2xl font-black italic">Inscripción: S/ 3.00</p>
-             <p class="text-slate-300 font-bold text-[10px] md:text-sm uppercase tracking-widest px-4">
+             <p class="text-slate-300 font-bold text-[10px] md:text-sm uppercase tracking-widest px-4 text-center">
                Usa tu cuenta institucional (@ms.upla.edu.pe) para el registro oficial.
              </p>
           </div>
@@ -158,8 +142,27 @@ const suggestedDecks = [
         </div>
       </section>
 
+      <section class="w-full max-w-3xl mb-20 px-2">
+        <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic mb-8 text-center" style="font-family: 'Lilita One', cursive;">Dudas de la Arena</h2>
+        <div class="space-y-4 px-2">
+          {[
+            { q: "¿Por qué el costo de 3 soles?", a: "El monto recaudado se destina íntegramente al pozo de premios para incentivar la competencia estudiantil." },
+            { q: "¿Cómo realizo el pago?", a: "Dentro del formulario de Microsoft encontrarás el QR o número para realizar el pago vía Yape o Plin." },
+            { q: "¿Se permiten evoluciones?", a: "Sí, siempre que las tengas desbloqueadas en tu cuenta y se mantengan en el nivel estándar 11 del torneo." },
+            { q: "¿Cómo verifican mi identidad?", a: "El sistema de registro valida automáticamente que ingreses con tu correo institucional de la UPLA." }
+          ].map(item => (
+            <details class="group bg-white/5 border border-white/10 rounded-[1.5rem] md:rounded-3xl p-5 md:p-6 cursor-pointer hover:bg-white/10 transition-all">
+              <summary class="text-white font-bold list-none flex justify-between items-center italic uppercase text-xs md:text-base select-none">
+                {item.q} <span class="text-blue-500 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <p class="text-slate-400 mt-4 font-medium leading-relaxed text-xs md:text-sm text-center md:text-left">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <footer class="pb-10 pt-10 text-center opacity-30 px-4">
-        <p class="text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em]">Torneo Universitario • Huancayo 2026</p>
+        <p class="text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em] text-center">Torneo Universitario • Huancayo 2026</p>
       </footer>
 
     </div>
