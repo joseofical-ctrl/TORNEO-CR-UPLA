@@ -87,10 +87,34 @@ const suggestedDecks = [
       </div>
 
       <section class="w-full max-w-5xl mb-20 px-2 text-center">
-        <div class="border-2 border-dashed border-white/10 p-10 md:p-16 rounded-[3rem] md:rounded-[4rem] backdrop-blur-sm group hover:border-blue-500/30 transition-all duration-700 shadow-xl">
-          <span class="text-5xl md:text-6xl mb-6 block group-hover:scale-125 transition-transform duration-500">📊</span>
-          <h3 class="text-2xl md:text-3xl font-black text-white uppercase italic" style="font-family: 'Lilita One', cursive;">Bracket del Torneo</h3>
-          <p class="text-slate-500 font-bold uppercase text-[9px] md:text-[10px] tracking-[0.4em] mt-2 italic leading-relaxed text-center">El cuadro de enfrentamientos se publicará <br/> al cerrar los 12 cupos oficiales</p>
+        <div class="bg-white/[0.02] border-2 border-blue-500/20 p-8 md:p-12 rounded-[3rem] shadow-xl backdrop-blur-md">
+          <h3 class="text-3xl font-black text-white uppercase italic mb-8" style="font-family: 'Lilita One', cursive;">Sorteo de Llaves Oficial</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-yellow-500/5 border border-yellow-500/20 p-6 rounded-2xl text-left">
+              <h4 class="text-yellow-500 font-black text-sm uppercase mb-4 tracking-widest">⚡ Pases Directos a Cuartos</h4>
+              <ul class="text-white space-y-2 font-bold italic text-sm">
+                <li>1. [Esperando Sorteo...]</li>
+                <li>2. [Esperando Sorteo...]</li>
+                <li>3. [Esperando Sorteo...]</li>
+                <li>4. [Esperando Sorteo...]</li>
+              </ul>
+            </div>
+
+            <div class="bg-blue-500/5 border border-blue-500/20 p-6 rounded-2xl text-left">
+              <h4 class="text-blue-400 font-black text-sm uppercase mb-4 tracking-widest">⚔️ Ronda 1 (Octavos)</h4>
+              <ul class="text-white space-y-2 font-bold italic text-sm">
+                <li>• Jugador A vs Jugador B</li>
+                <li>• Jugador C vs Jugador D</li>
+                <li>• Jugador E vs Jugador F</li>
+                <li>• Jugador G vs Jugador H</li>
+              </ul>
+            </div>
+          </div>
+          
+          <p class="text-[9px] text-slate-500 mt-8 uppercase font-black italic tracking-[0.3em]">
+            * El sorteo se realizará aleatoriamente entre los 12 inscritos oficiales.
+          </p>
         </div>
       </section>
 
@@ -125,7 +149,7 @@ const suggestedDecks = [
                   <img src={ban.img} alt={ban.name} class="w-16 h-20 md:w-20 md:h-24 object-contain grayscale opacity-50 transition-all group-hover:grayscale-0 group-hover:opacity-100" />
                   <div class="absolute inset-0 flex items-center justify-center text-red-600 text-5xl md:text-6xl font-black rotate-45 pointer-events-none">/</div>
                 </div>
-                <p class="text-[9px] md:text-[10px] text-center mt-3 text-slate-500 font-black uppercase italic tracking-tighter text-center">{ban.name}</p>
+                <p class="text-[9px] md:text-[10px] text-center mt-3 text-slate-500 font-black uppercase italic tracking-tighter">{ban.name}</p>
               </div>
             ))}
           </div>
