@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/layout.astro';
 
+// Datos de las cartas para el meta y bans
 const cards = [
   { name: 'Barril de Duendes', img: 'https://cdn.royaleapi.com/static/img/cards-150/goblin-barrel.png' },
   { name: 'Cohete', img: 'https://cdn.royaleapi.com/static/img/cards-150/rocket.png' },
@@ -122,15 +123,16 @@ const suggestedDecks = [
 
       <section class="w-full max-w-2xl mb-20 px-2">
         <a 
-          href="/Guia-Arena-UPLA-2026.pdf" 
+          href="/Guíaoficial.pdf" 
           target="_blank"
+          rel="noopener noreferrer"
           class="flex items-center gap-6 bg-white/[0.03] hover:bg-white/[0.08] border-2 border-dashed border-white/20 p-6 md:p-8 rounded-[2.5rem] transition-all group shadow-2xl text-left"
         >
           <div class="bg-red-600 p-4 rounded-2xl shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform">
             <span class="text-3xl md:text-4xl">📄</span>
           </div>
           <div>
-            <h4 class="text-white font-black uppercase italic text-xl md:text-2xl leading-tight" style="font-family: 'Lilita One', cursive;">Descargar Guía Oficial</h4>
+            <h4 class="text-white font-black uppercase italic text-xl md:text-2xl leading-tight" style="font-family: 'Lilita One', cursive;">Ver Guía Oficial</h4>
             <p class="text-slate-400 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-1">Reglamento, Formato y FAQ en PDF</p>
           </div>
         </a>
@@ -140,8 +142,8 @@ const suggestedDecks = [
         <div class="bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border border-purple-500/30 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden text-center md:text-left">
           <h2 class="text-2xl md:text-3xl font-black text-purple-400 uppercase italic mb-6" style="font-family: 'Lilita One', cursive;">El Mazo a Vencer</h2>
           <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-10">
-            <p class="flex-1 italic text-slate-300 text-sm md:text-base leading-relaxed">El <span class="text-white font-black uppercase">Log Bait Clásico</span> domina actualmente el meta de nivel 11. ¿Tienes la defensa preparada?</p>
-            <div class="grid grid-cols-4 gap-2 md:gap-3 bg-black/40 p-4 rounded-[1.5rem]">
+            <p class="flex-1 italic text-slate-300 text-sm md:text-base leading-relaxed text-center md:text-left">El <span class="text-white font-black uppercase">Log Bait Clásico</span> domina actualmente el meta de nivel 11. ¿Tienes la defensa preparada?</p>
+            <div class="grid grid-cols-4 gap-2 md:gap-3 bg-black/40 p-4 rounded-[1.5rem] mx-auto">
               {cards.map(card => <img src={card.img} alt={card.name} class="w-12 h-16 md:w-20 md:h-24 object-contain transition-transform hover:scale-110" />)}
             </div>
           </div>
@@ -151,7 +153,7 @@ const suggestedDecks = [
       <section class="w-full mb-20 px-2">
         <div class="bg-red-600/10 border border-red-500/20 p-8 rounded-[2.5rem] shadow-xl relative overflow-hidden text-center md:text-left">
           <div class="absolute -right-10 -top-10 text-9xl opacity-10 rotate-12">🚫</div>
-          <h2 class="text-2xl font-black text-red-500 uppercase italic mb-6" style="font-family: 'Lilita One', cursive;">Cartas Restringidas</h2>
+          <h2 class="text-2xl font-black text-red-500 uppercase italic mb-6 text-center md:text-left" style="font-family: 'Lilita One', cursive;">Cartas Restringidas</h2>
           <div class="flex flex-wrap justify-center md:justify-start gap-6 relative z-10">
             {bans.map(ban => (
               <div class="flex flex-col items-center">
@@ -184,7 +186,7 @@ const suggestedDecks = [
       <section id="registro" class="w-full mb-20 px-2">
         <div class="bg-gradient-to-br from-blue-900/40 to-slate-900/90 border-2 border-blue-500/30 p-10 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl">
           <h2 class="text-4xl md:text-6xl font-black text-white uppercase italic mb-6 leading-none" style="font-family: 'Lilita One', cursive;">¿Listo para <br/> el Duelo?</h2>
-          <div class="mb-10">
+          <div class="mb-10 text-center">
             <p class="text-yellow-500 text-xl md:text-2xl font-black italic">Inscripción: S/ 3.00</p>
             <p class="text-slate-300 font-bold text-[10px] md:text-sm uppercase tracking-widest px-4 mt-2">Usa tu cuenta institucional (@ms.upla.edu.pe)</p>
           </div>
@@ -199,7 +201,7 @@ const suggestedDecks = [
       </section>
 
       <section class="w-full max-w-3xl mb-20 px-2">
-        <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic mb-8" style="font-family: 'Lilita One', cursive;">Dudas de la Arena</h2>
+        <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic mb-8 text-center" style="font-family: 'Lilita One', cursive;">Dudas de la Arena</h2>
         <div class="space-y-4 px-2">
           {[
             { q: "¿Por qué el costo de 3 soles?", a: "El monto recaudado se destina íntegramente al pozo de premios para incentivar la competencia estudiantil." },
@@ -211,13 +213,13 @@ const suggestedDecks = [
               <summary class="text-white font-bold list-none flex justify-between items-center italic uppercase text-xs md:text-base select-none">
                 {item.q} <span class="text-blue-500 group-open:rotate-180 transition-transform">▼</span>
               </summary>
-              <p class="text-slate-400 mt-4 font-medium text-xs md:text-sm leading-relaxed">{item.a}</p>
+              <p class="text-slate-400 mt-4 font-medium text-xs md:text-sm leading-relaxed text-center md:text-left">{item.a}</p>
             </details>
           ))}
         </div>
       </section>
 
-      <footer class="pb-10 pt-10 opacity-30 px-4 text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em]">Torneo Universitario • Huancayo 2026</footer>
+      <footer class="pb-10 pt-10 opacity-30 px-4 text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em] text-center">Torneo Universitario • Huancayo 2026</footer>
     </div>
   </main>
 </Layout>
