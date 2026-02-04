@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/layout.astro';
 
+// Datos de las cartas para el meta y bans
 const cards = [
   { name: 'Barril de Duendes', img: 'https://cdn.royaleapi.com/static/img/cards-150/goblin-barrel.png' },
   { name: 'Cohete', img: 'https://cdn.royaleapi.com/static/img/cards-150/rocket.png' },
@@ -44,7 +45,7 @@ const suggestedDecks = [
 ---
 
 <Layout titulo="Arena UPLA | Torneo Estudiantil">
-  <main class="relative w-full min-h-screen bg-[#020617] text-white p-4 md:p-10 overflow-x-hidden">
+  <main class="relative w-full h-auto bg-[#020617] text-white p-4 md:p-10">
     
     <div class="fixed top-[-10%] left-[-10%] w-[80%] h-[60%] bg-blue-600/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[80%] h-[60%] bg-orange-600/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
@@ -52,7 +53,7 @@ const suggestedDecks = [
     <div class="relative z-10 max-w-6xl mx-auto flex flex-col items-center">
       
       <header class="text-center mb-12 md:mb-16 pt-8">
-        <div class="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-cyan-400 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+        <div class="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-cyan-400 text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] mb-6 shadow-lg">
           Torneo Exclusivo para Estudiantes UPLA
         </div>
         <h1 class="text-6xl md:text-[140px] font-black italic leading-[0.85] uppercase tracking-tighter drop-shadow-2xl" style="font-family: 'Lilita One', cursive;">
@@ -68,15 +69,15 @@ const suggestedDecks = [
           <p class="text-yellow-500/60 font-bold text-[10px] uppercase tracking-widest mt-4">Pozo para el Campeón</p>
         </div>
 
-        <div class="bg-blue-600/10 backdrop-blur-2xl border border-blue-500/30 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] text-center shadow-2xl">
+        <div class="bg-blue-600/10 backdrop-blur-2xl border border-blue-500/30 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] text-center shadow-2xl flex flex-col items-center justify-center">
           <h2 class="text-3xl md:text-4xl text-blue-400 font-black uppercase italic mb-2" style="font-family: 'Lilita One', cursive;">Costo</h2>
-          <p class="text-white text-5xl md:text-6xl font-black italic">S/ 3.00</p>
+          <p class="text-white text-5xl md:text-6xl font-black italic uppercase leading-none">S/ 3.00</p>
           <p class="text-blue-300/60 font-bold text-[10px] uppercase tracking-widest mt-4">Inscripción por guerrero</p>
         </div>
 
         <div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl">
-          <h2 class="text-3xl md:text-4xl text-slate-400 font-black uppercase italic mb-4 text-center" style="font-family: 'Lilita One', cursive;">Reglas</h2>
-          <ul class="text-slate-200 text-base md:text-lg font-bold space-y-1 text-center">
+          <h2 class="text-3xl md:text-4xl text-slate-400 font-black uppercase italic mb-4 text-center md:text-left" style="font-family: 'Lilita One', cursive;">Reglas</h2>
+          <ul class="text-slate-200 text-base md:text-lg font-bold space-y-1 text-center md:text-left">
             <li>• Nivel de Torre 11</li>
             <li>• Eliminación Directa 1v1</li>
             <li>• Login Microsoft 365</li>
@@ -91,8 +92,8 @@ const suggestedDecks = [
             <div class="flex-1 text-center md:text-left">
               <p class="text-slate-300 font-bold mb-6 italic leading-relaxed text-sm">El <span class="text-white font-black">Log Bait Clásico</span> domina el meta de nivel 11. ¿Tienes la estrategia para frenarlo?</p>
               <div class="flex flex-wrap justify-center md:justify-start gap-2">
-                <span class="px-3 py-1 bg-purple-500/20 rounded-full text-[9px] font-black text-purple-300 uppercase border border-purple-500/30 italic">Dificultad: Alta</span>
-                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-[9px] font-black text-blue-300 uppercase border border-blue-500/30 italic">3.3 Elixir</span>
+                <span class="px-3 py-1 bg-purple-500/20 rounded-full text-[9px] font-black text-purple-300 uppercase border border-purple-500/30 italic tracking-tighter">Dificultad: Alta</span>
+                <span class="px-3 py-1 bg-blue-500/20 rounded-full text-[9px] font-black text-blue-300 uppercase border border-blue-500/30 italic tracking-tighter">3.3 Elixir</span>
               </div>
             </div>
             <div class="grid grid-cols-4 gap-2 md:gap-3 bg-black/40 p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] border border-white/5 shadow-inner">
@@ -105,8 +106,9 @@ const suggestedDecks = [
       </section>
 
       <section class="w-full mb-20 px-2">
-        <div class="bg-red-600/10 border border-red-500/20 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] backdrop-blur-md relative overflow-hidden shadow-xl">
-          <h2 class="text-2xl md:text-3xl font-black text-red-500 uppercase italic mb-6 text-center md:text-left" style="font-family: 'Lilita One', cursive;">Cartas Restringidas</h2>
+        <div class="bg-red-600/10 border border-red-500/20 p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] backdrop-blur-md relative overflow-hidden shadow-xl text-center md:text-left">
+          <div class="absolute -right-10 -top-10 text-9xl opacity-10 rotate-12">🚫</div>
+          <h2 class="text-2xl md:text-3xl font-black text-red-500 uppercase italic mb-6" style="font-family: 'Lilita One', cursive;">Cartas Restringidas</h2>
           <div class="flex flex-wrap justify-center md:justify-start gap-6 md:gap-10">
             {bans.map(ban => (
               <div class="flex flex-col items-center group">
@@ -121,12 +123,29 @@ const suggestedDecks = [
         </div>
       </section>
 
+      <section class="w-full mb-20 px-2">
+        <h2 class="text-2xl md:text-3xl font-black text-white uppercase italic mb-10 text-center" style="font-family: 'Lilita One', cursive;">Recomendaciones</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {suggestedDecks.map(deck => (
+            <div class="bg-white/[0.02] border border-white/5 p-6 md:p-8 rounded-[2rem] md:rounded-[3rem] backdrop-blur-md hover:bg-white/[0.04] transition-all group">
+              <h4 class="text-white font-black italic text-lg md:text-xl uppercase mb-1">{deck.name}</h4>
+              <span class="text-[9px] text-blue-400 font-bold uppercase tracking-widest">{deck.tag}</span>
+              <div class="flex gap-2 md:gap-4 mt-6 justify-center md:justify-start">
+                {deck.cards.map(img => (
+                  <img src={img} class="w-12 h-16 md:w-16 md:h-20 object-contain drop-shadow-md transition-transform group-hover:-translate-y-2" />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="registro" class="w-full mb-20 px-2">
-        <div class="bg-gradient-to-br from-blue-900/40 to-slate-900/90 border-2 border-blue-500/30 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl text-center relative overflow-hidden">
-          <h2 class="text-3xl md:text-6xl font-black uppercase italic mb-6 leading-none" style="font-family: 'Lilita One', cursive;">¿Listo para <br/> el Duelo?</h2>
-          <p class="text-slate-300 font-bold mb-10 max-w-xl mx-auto italic text-xs md:text-base px-2">
+        <div class="bg-gradient-to-br from-blue-900/40 to-slate-900/90 border-2 border-blue-500/30 p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl text-center relative overflow-hidden group">
+          <h2 class="text-3xl md:text-6xl font-black text-white uppercase italic mb-6 leading-none" style="font-family: 'Lilita One', cursive;">¿Listo para <br/> el Duelo?</h2>
+          <p class="text-slate-300 font-bold mb-10 max-w-xl mx-auto italic text-xs md:text-base px-2 leading-relaxed">
             Inscripción: <span class="text-yellow-500 text-lg md:text-xl font-black">S/ 3.00</span> <br/>
-            Usa tu cuenta institucional para el registro oficial.
+            Inicia sesión con tu cuenta institucional de la UPLA para acceder al registro.
           </p>
           <a 
             href="https://forms.office.com/Pages/ResponsePage.aspx?id=uWqgjTfRT06djoIq445XAby72mATZKJOiaBeCGAF87FUMDBJTEZWVzdXQzExVzlXTExNNFBXQjZDVi4u" 
@@ -139,7 +158,7 @@ const suggestedDecks = [
         </div>
       </section>
 
-      <footer class="pb-10 pt-10 text-center opacity-30">
+      <footer class="pb-10 pt-10 text-center opacity-30 px-4">
         <p class="text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em]">Torneo Universitario • Huancayo 2026</p>
       </footer>
 
